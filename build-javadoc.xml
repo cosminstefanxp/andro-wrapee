@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="compress">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="/home/cosmin/.android-sdks/tools/support/annotations.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.6" sourcefiles="src/org/androwrapee/db/DatabaseField.java,src/org/androwrapee/db/IllegalClassStructureException.java,src/org/androwrapee/db/IdField.java,src/org/androwrapee/db/DatabaseClass.java,src/org/androwrapee/db/ReferenceField.java,src/org/androwrapee/db/DefaultDatabaseHelper.java,src/org/androwrapee/db/ReflectionManager.java,src/org/androwrapee/db/DefaultDAO.java,src/org/androwrapee/db/DatabaseReferenceClass.java" sourcepath="gen:src" splitindex="true" use="true" version="true">
+            <link href="file:/home/cosmin/.android-sdks/docs/reference"/>
+        </javadoc>
+    </target>
+   	<target name="compress" depends="javadoc">
+		<jar destfile="dist/androwrapee-docs.jar">
+			<fileset dir="doc"/>
+		</jar>
+	</target>
+</project>

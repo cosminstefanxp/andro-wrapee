@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="compress" name="AndroWrapee">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Android 2.1.libraryclasspath">
+        <pathelement location="../../.android-sdks/platforms/android-7/android.jar"/>
+    </path>
+    <path id="Android Dependencies.libraryclasspath">
+        <pathelement location="../../.android-sdks/tools/support/annotations.jar"/>
+    </path>
+    <path id="AndroWrapee.classpath">
+        <path refid="Android 2.1.libraryclasspath"/>
+        <path refid="Android Dependencies.libraryclasspath"/>
+    </path>
+
+	<target name="init">
+		<mkdir dir="build" />
+		<mkdir dir="dist" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="build" >
+		     <classpath refid="AndroWrapee.classpath"/>
+		 </javac>
+	</target>
+	
+	<target name="compress" depends="compile">
+		<jar destfile="dist/androwrapee.jar">
+			<fileset dir="build"/>
+			<fileset dir="src"/>
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="build" />
+		<delete dir="dist" />
+	</target>
+	
+</project>
