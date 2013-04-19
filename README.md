@@ -24,7 +24,7 @@ Here are the simple steps necessary for using the library.
     
     public ArrayList<Color> availableColors; //will not be stored in the database, as it doesn't have the required annotation
     ...
-}
+    }
 
 #### Get a reference to the database helper
     SQLiteOpenHelper dbHelper = new DefaultDatabaseHelper(context, DATABASE_NAME, DATABASE_VERSION, 
