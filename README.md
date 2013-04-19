@@ -4,7 +4,7 @@ Andro-Wrapee
 The library users can perform the CRUD (create, read, update, delete) operations on a database that stores Java objects. Practically, it's a DAO (Database Access Object) that can help users manage SQLite tables which contain Java objects.
 
 #Documentation
-The Javadoc can be found [here][http://andro-wrapee.googlecode.com/git/doc/index.html].
+The Javadoc can be found [here](http://andro-wrapee.googlecode.com/git/doc/index.html).
 
 ##Use scenario
 Here are the simple steps necessary for using the library.
@@ -53,4 +53,4 @@ Here are the simple steps necessary for using the library.
     dao.close();
     ...
 
-For more details, consult the Javadoc of the [DefaultDao][http://andro-wrapee.googlecode.com/git/doc/org/androwrapee/db/DefaultDAO.html] object.
+For more details, consult the Javadoc of the [DefaultDao](http://andro-wrapee.googlecode.com/git/doc/org/androwrapee/db/DefaultDAO.html) object.
